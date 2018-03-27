@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bd.mapper.AnimalMapper">
+
+<select id="list" resultType="animal">
+   select a.*,b.cname,c.disname from animal a left join category b on a.cid=b.cid left join distribution c on a.disid=c.disid
+</select>
+
+</mapper>
